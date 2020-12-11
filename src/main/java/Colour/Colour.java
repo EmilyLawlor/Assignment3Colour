@@ -1,14 +1,15 @@
 package Colour;
 
 public class Colour {
-    private int[] components;
+    private float r;
+    private float g;
+    private float b;
 
-    public Colour(int[] components){
-        this.components = components;
+    public Colour(float r, float g, float b){
+        this.r = r;
+        this.g = g;
+        this.b = b;
     }
 
-    public boolean testNumComponents(){
-        return this.components.length == 3;
-    }
 
 }

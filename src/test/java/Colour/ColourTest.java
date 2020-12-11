@@ -10,9 +10,7 @@ class ColourTest {
 
     @Test
     public void acceptThreeComponentsOnly(){
-        final int[] components = {1,2,3};
-        colour = new Colour(components);
-        assertTrue(colour.testNumComponents());
+        colour = new Colour(10, 20, 30);
     }
 
 }
