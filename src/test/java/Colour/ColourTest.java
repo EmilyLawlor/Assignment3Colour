@@ -12,7 +12,7 @@ class ColourTest {
     public void acceptThreeComponentsOnly(){
         final int[] components = {1,2,3};
         colour = new Colour(components);
-        assertTrue(colour.testNumComponets());
+        assertTrue(colour.testNumComponents());
     }
 
 }
