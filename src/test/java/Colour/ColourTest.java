@@ -21,9 +21,7 @@ class ColourTest {
 
     @Test
     public void rejectInvalidComponentValues() {
-        assertThrows(IllegalArgumentException.class, () -> {
-            colour = new Colour(10000, -24, 12345);
-        });
+        assertThrows(IllegalArgumentException.class, () -> colour = new Colour(10000, -24, 12345));
     }
 
     @Test
@@ -31,6 +29,4 @@ class ColourTest {
         colour = new Colour(10, 20, 30);
         assertEquals("RGB", colour.getModel());
     }
-
-
 }
