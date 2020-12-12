@@ -26,5 +26,11 @@ class ColourTest {
         });
     }
 
+    @Test
+    public void defaultMethodMustBeRBG(){
+        colour = new Colour(10, 20, 30);
+        assertEquals("RGB", colour.getModel());
+    }
+
 
 }
