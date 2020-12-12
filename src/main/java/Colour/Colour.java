@@ -11,5 +11,4 @@ public class Colour {
         this.b = b;
     }
 
-
 }
