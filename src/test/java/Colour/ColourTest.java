@@ -6,6 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ColourTest {
     private Colour colour;
+    private Colour anotherColour;
 
     @Test
     public void acceptThreeComponentsOnly(){
@@ -28,5 +29,12 @@ class ColourTest {
     public void defaultMethodMustBeRBG(){
         colour = new Colour(10, 20, 30);
         assertEquals("RGB", colour.getModel());
+    }
+
+    @Test
+    public void twoColoursEqualIfTheyHaveTheSameComponentsAndModel(){
+        colour = new Colour(10,20,30);
+        anotherColour = new Colour(10,20,30);
+        assertEquals(anotherColour, colour);
     }
 }

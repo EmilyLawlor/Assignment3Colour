@@ -32,6 +32,4 @@ public class Colour {
     public String getModel() {
         return model;
     }
-
-
 }
