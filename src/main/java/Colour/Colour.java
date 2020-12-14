@@ -6,7 +6,6 @@ public class Colour {
     private float b;
     private String model;
 
-
     public Colour(float r, float g, float b) {
         if (r >= 0 && r <= 255 && g >= 0 && g <= 255 && b >= 0 && b <= 255){
             this.r = r;
@@ -31,5 +30,26 @@ public class Colour {
 
     public String getModel() {
         return model;
+    }
+
+    @Override public boolean equals(Object o){
+        if (!(o instanceof Colour)){
+            return false;
+        }
+        Colour otherColour = (Colour) o;
+        return this.getModel().equals(otherColour.getModel()) && this.r == otherColour.getR() &&
+                this.g == otherColour.getG() && this.b == otherColour.getB();
+    }
+
+    public float getR() {
+        return r;
+    }
+
+    public float getG() {
+        return g;
+    }
+
+    public float getB() {
+        return b;
     }
 }
