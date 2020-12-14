@@ -37,4 +37,18 @@ class ColourTest {
         anotherColour = new Colour(10,20,30);
         assertEquals(anotherColour, colour);
     }
+
+    @Test
+    public void coloursWithDifferentCompoenentsNotEqual(){
+        colour = new Colour(10,20,30);
+        anotherColour = new Colour(30,210,0);
+        assertNotEquals(anotherColour, colour);
+    }
+
+    @Test
+    public void coloursWithDifferentModelsNotEqual(){
+        colour = new Colour(10,20,30);
+        anotherColour = new Colour(10,20,30, "CMYK");
+        assertNotEquals(anotherColour, colour);
+    }
 }
