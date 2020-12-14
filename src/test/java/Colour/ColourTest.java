@@ -57,7 +57,7 @@ class ColourTest {
     public void coloursCanBeAddedIfTheSameModel(){
         colour = new Colour(10,20,30);
         anotherColour = new Colour(30,210,0);
-        result = colour + anotherColour;
+        result = colour.plus(anotherColour);
         assertEquals(result, new Colour(40, 230, 30));
     }
 
@@ -65,6 +65,6 @@ class ColourTest {
     public void coloursOfDifferentModelsCanNotBeAdded(){
         colour = new Colour(10,20,30);
         anotherColour = new Colour(10,20,30, "CMYK");
-        assertThrows(IllegalArgumentException.class, colour + anotherColour);
+        assertThrows(IllegalArgumentException.class, () -> colour.plus(anotherColour));
     }
 }

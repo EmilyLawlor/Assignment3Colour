@@ -52,4 +52,6 @@ public class Colour {
     public float getB() {
         return b;
     }
+
+
 }
