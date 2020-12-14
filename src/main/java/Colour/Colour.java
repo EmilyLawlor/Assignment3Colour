@@ -37,7 +37,7 @@ public class Colour {
             return false;
         }
         Colour otherColour = (Colour) o;
-        return this.getModel().equals(otherColour.getModel()) && this.r == otherColour.getR() &&
+        return this.sameModel(otherColour) && this.r == otherColour.getR() &&
                 this.g == otherColour.getG() && this.b == otherColour.getB();
     }
 
@@ -53,5 +53,17 @@ public class Colour {
         return b;
     }
 
+    public boolean sameModel(Colour otherColour){
+        return this.getModel().equals(otherColour.getModel());
+    }
 
+    public Colour plus(Colour otherColour){
+        if (!(this.sameModel(otherColour))){
+            throw new IllegalArgumentException("Colours must have the same model");
+        }
+        float newR = this.r + otherColour.getR();
+        float newG = this.g + otherColour.getG();
+        float newB = this.b + otherColour.getB();
+        return new Colour(newR, newG, newB, this.getModel());
+    }
 }
