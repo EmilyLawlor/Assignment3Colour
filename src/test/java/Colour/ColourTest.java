@@ -61,5 +61,10 @@ class ColourTest {
         assertEquals(result, new Colour(40, 230, 30));
     }
 
-
+    @Test
+    public void coloursOfDifferentModelsCanNotBeAdded(){
+        colour = new Colour(10,20,30);
+        anotherColour = new Colour(10,20,30, "CMYK");
+        assertThrows(IllegalArgumentException.class, colour + anotherColour);
+    }
 }
