@@ -72,7 +72,7 @@ class ColourTest {
     public void addedComponentsMustBeLessThan255(){
         colour = new Colour(200,20,200);
         anotherColour = new Colour(100,100,100);
-        Colour result = colour.plus(anotherColour);
+        result = colour.plus(anotherColour);
         assertEquals(result, new Colour(255, 120, 255));
     }
 }
