@@ -7,6 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class ColourTest {
     private Colour colour;
     private Colour anotherColour;
+    private Colour result;
 
     @Test
     public void acceptThreeComponentsOnly(){
@@ -51,4 +52,14 @@ class ColourTest {
         anotherColour = new Colour(10,20,30, "CMYK");
         assertNotEquals(anotherColour, colour);
     }
+
+    @Test
+    public void coloursCanBeAddedIfTheSameModel(){
+        colour = new Colour(10,20,30);
+        anotherColour = new Colour(30,210,0);
+        result = colour + anotherColour;
+        assertEquals(result, new Colour(40, 230, 30));
+    }
+
+
 }
