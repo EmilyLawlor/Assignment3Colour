@@ -64,6 +64,9 @@ public class Colour {
         float newR = this.r + otherColour.getR();
         float newG = this.g + otherColour.getG();
         float newB = this.b + otherColour.getB();
+        if (newR > 255){newR = 255;}
+        if (newG > 255){newG = 255;}
+        if (newB > 255){newB = 255;}
         return new Colour(newR, newG, newB, this.getModel());
     }
 }
